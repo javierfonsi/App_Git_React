@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
+import Home from "./components/Home/Home";
+import Followers from "./views/followers/Followers";
+import SingleUser from "./views/SingleUser/SingleUser";
+import Following from "./views/Following/Following";
+import Repo from "./views/repo/Repo";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" exact element={<Home/>}/>
+        <Route path="/users/:name/repos" element={<Repo/>}/>
+        <Route path="/users/:name/followers" element={<Followers/>}/>
+        <Route path="/users/:name/following" element={<Following/>}/> 
+        <Route path="/users/:userName" element={<SingleUser/>}/>  
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 

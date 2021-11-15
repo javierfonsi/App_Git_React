@@ -1,0 +1,33 @@
+.card-container{
+    background: #9FD8DF;
+    width: 92%;
+    margin: 20px auto;
+    border: 2px solid #FF7171;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 20rem;
+}
+
+.card-container>img{
+    width: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-container>ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-container>ul{
+    list-style: none;
+}
+
+.card-container>h2{
+    color: #FF7171;
+    font-family:'sans-serif'
+}
